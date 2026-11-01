@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FilterRules Version="1.0" Time="202507301815">
+    <EventRuleGroup ID="1" EventID="1003">
+        <Rule ID="1" Relationship="2" Action="1">
+            <Condition ID="1" Object="101" Field="1004" Matcher="104">mv|bash</Condition>
+        </Rule>
+    </EventRuleGroup>
+
+    <EventRuleGroup ID="2" EventID="2002">
+        <Rule ID="1" Relationship="2" Action="1">
+            <Condition ID="1" Object="200" Field="2001" Matcher="104">.txt|.sh</Condition>
+        </Rule>
+    </EventRuleGroup>
+
+    <EventRuleGroup ID="3" EventID="2003">
+        <Rule ID="1" Relationship="2" Action="1">
+            <Condition ID="1" Object="200" Field="2001" Matcher="104">.jons|.php</Condition>
+        </Rule>
+    </EventRuleGroup>
+
+    <EventRuleGroup ID="4" EventID="2007">
+        <Rule ID="1" Relationship="2" Action="1">
+            <Condition ID="1" Object="201" Field="2001" Matcher="104">.txt|.exe</Condition>
+        </Rule>
+    </EventRuleGroup>
+
+    <EventRuleGroup ID="5" EventID="3001">
+        <Rule ID="1" Relationship="2" Action="1">
+            <Condition ID="1" Object="24" Field="10" Matcher="104">/usr/bin/abc</Condition>
+        </Rule>
+    </EventRuleGroup>
+</FilterRules>
+
