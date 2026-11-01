@@ -1,0 +1,6 @@
+[submodule "src/third/googletest"]
+	path = src/third/googletest
+	url = https://github.com/google/googletest.git
+[submodule "src/third/libbpf"]
+	path = src/third/libbpf
+	url = https://github.com/libbpf/libbpf.git
