@@ -1,0 +1,36 @@
+﻿{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "linux-base",
+            "generator": "Ninja",
+            "hidden": true,
+            "installDir": "${sourceDir}/output/install/${presetName}",
+            "vendor": {
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/VisualStudio/$ms{projectDirName}",
+                    "rsyncCommandArgs": [ "-t", "--delete", "--delete-excluded", "-L" ]
+                }
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        }, {
+            "name": "debug",
+            "inherits": "linux-base",
+            "binaryDir": "${sourceDir}/output/Debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "debug"
+            }
+        }, {
+            "name": "release",
+            "inherits": "linux-base",
+            "binaryDir": "${sourceDir}/output/Release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "release"
+            }
+        }
+    ]
+}
